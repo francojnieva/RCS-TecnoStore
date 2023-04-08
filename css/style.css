@@ -4,6 +4,30 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+/* SECTION MOBILE */
+
+.mobile-container {
+    background-color: #0c0c0c;
+}
+
+h4 {
+    background-color: #0c0c0c;
+    color: white;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    font-weight: bold;
+}
+
+/* SECTION WATCH */ 
+
+.watch-container {
+    background-color: #0c0c0c;
+}
+
+.banner {
+    width: 100%;
+    object-fit: cover;
+}
 
 /* SELECTION TELEVISION */
 
