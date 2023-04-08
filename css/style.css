@@ -31,7 +31,7 @@ h4 {
 
 /* SELECTION TELEVISION */
 
-.television-container {
+.product-container {
     background-color: #0c0c0c;
 
 
@@ -73,7 +73,7 @@ h4 {
 }
 
 @media screen and (min-width: 320px) {
-    .television-container {
+    .product-container {
         display: flex;
         flex-direction: column;
         align-items:center ;
@@ -89,7 +89,7 @@ h4 {
 }
 
 @media screen and (min-width: 768px) {
-    .television-container {
+    .product-container {
         flex-direction: row;
         justify-content: space-evenly;
         flex-wrap: wrap;
@@ -119,4 +119,44 @@ h4 {
 .footer-container {
     background-color:#001554 ;
     color: white;
+    
 }
+
+
+
+@media screen and (min-width: 320px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        min-height: 30vh;
+
+    }
+
+    .link-container{
+        display: flex;
+
+    }
+
+
+}
+
+.credit-card img {
+    width: 3.2rem;
+
+}
+    
+
+    
