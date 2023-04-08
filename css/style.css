@@ -4,3 +4,77 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+
+/* SELECTION TELEVISION */
+
+.television-container {
+    background-color: #0c0c0c;
+
+
+}
+
+.card {
+    background-color: #232323;
+    color:white;
+    transition: 0.3s;
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px 1px  lightgrey;
+}
+
+
+
+
+.price {
+    font-weight: bold;
+    border: 0.1rem solid #7532F9;
+    padding: 0.3rem ;
+    width: 35%;
+}
+
+.btn {
+    background: linear-gradient(to right, #E100FF, #7F00FF); 
+    border: 0.1rem solid #E100FF;
+    font-weight: bold;
+    
+    
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #bc4e9c, #f80759);
+    border: 0.1rem solid #f80759;
+}
+
+@media screen and (min-width: 320px) {
+    .television-container {
+        display: flex;
+        flex-direction: column;
+        align-items:center ;
+        padding: 2rem;  
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+     
+    
+}
+
+@media screen and (min-width: 768px) {
+    .television-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        
+    }
+
+    .card {
+        margin-bottom: 2rem;
+    }
+}
+
+
