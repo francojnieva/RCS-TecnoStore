@@ -102,3 +102,21 @@ h4 {
 }
 
 
+
+  
+.footer-title  p{
+    font-family: 'Orbitron', sans-serif;
+    color: white; 
+    font-size: 2rem;
+  }
+  
+.text-secondary {
+    border-top: 1px solid;
+    color:white; 
+    padding: 0.5rem;
+}
+
+.footer-container {
+    background-color:#001554 ;
+    color: white;
+}
