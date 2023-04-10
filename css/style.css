@@ -10,8 +10,8 @@
 h4 {
     background-color: #0c0c0c;
     color: white;
-    padding-left: 1.5rem;
-    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-top: 1.5rem;
     font-weight: bold;
     margin-bottom: 0rem;
 }
@@ -19,6 +19,10 @@ h4 {
 @media screen and (min-width: 320px) {
     .iphone-banner {
         display: none;
+    }
+
+    .card .price-mobile {
+        width: 50%;
     }
 }
 
@@ -29,6 +33,12 @@ h4 {
     
     .iphone-banner-movil {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .mobile-container .card-mobile {
+        margin: 1rem;
     }
 }
 
@@ -122,7 +132,7 @@ h4 {
         display: flex;
         flex-direction: column;
         align-items:center ;
-        padding: 2rem;  
+        padding-top: 2rem;  
     }
 
     .card {
