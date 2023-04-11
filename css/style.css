@@ -5,6 +5,37 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+/* SECTION COMPANY */
+
+.company-container {
+    background-color: #0c0c0c;
+}
+
+@media screen and (min-width: 320px) {
+    .company-container img{
+        width: 4rem;
+    }
+
+    .company-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 2rem 0rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .company-container img{
+        width: 5.5rem;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .company-container img{
+        width: 6.5rem;
+    }
+}
+
 /* SECTION MOBILE */
 
 h4 {
