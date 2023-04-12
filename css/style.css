@@ -187,8 +187,58 @@ h4 {
     }
 }
 
+/* SECTION FORM CONTACT */
 
+.contact-container {
+    background-color: #0c0c0c;
+}
 
+.contact-container form input, textarea {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+.contact-container form input:focus, textarea:focus {
+    box-shadow: 0 0 2px 1px #E100FF;
+}
+
+.contact-container form .btn-send {
+    background-color: #7a03a8;
+    color: white;
+}
+
+@media screen and (min-width: 320px) {
+    .title-contact {
+        font-size: 1.8rem;
+        padding: 2rem 0rem;
+    }
+
+    .contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2rem;
+    }
+
+    .contact-container form {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-container form input, textarea {
+        width: 100%;
+        border-radius: .3rem;
+        outline: none;
+        resize: none;
+        border: none;
+        margin: .8rem 0rem;
+        padding: .8rem;
+    }
+}
+
+/* SECTION FOOTER */
   
 .footer-title  p{
     font-family: 'Orbitron', sans-serif;
