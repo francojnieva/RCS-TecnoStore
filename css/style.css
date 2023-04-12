@@ -37,6 +37,26 @@
 }
 
 /* SECTION MOBILE */
+/* SECTION HEADER */
+
+header {
+    background-color: #0c0c0c;
+}
+
+.logo-navbar {
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.search{
+    border-radius: 20px;
+}
+
+.link-navbar {
+    color: #ffffff;
+}
+
+/* SECTION */
 
 h4 {
     background-color: #0c0c0c;
