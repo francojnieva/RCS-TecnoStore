@@ -225,8 +225,8 @@ h4 {
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 8px 1px  lightgrey;
+    box-shadow: 0 0 2px 1px #E100FF;
+    
 }
 
 
@@ -264,6 +264,12 @@ h4 {
         margin-bottom: 1rem;
     }
 
+    .banner-television {
+        display: none;
+
+    }
+
+    
      
     
 }
@@ -280,6 +286,16 @@ h4 {
         margin-bottom: 2rem;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .banner-television {
+        display: inherit;
+        width: 100%;
+    }
+
+}
+
+
 
 /* SECTION FORM CONTACT */
 
