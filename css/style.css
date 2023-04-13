@@ -5,6 +5,98 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+/* SECTION HEADER */
+
+.navbar{
+    background-color: #0c0c0c;
+    padding: 20px 20px;
+}
+
+.logo-navbar {
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.logo-navbar:hover {
+    color: #ffffff;
+}
+
+.container-navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.links-navbar{
+    width: 100%;
+    color: #ffffff;
+}
+
+.links-navbar a:hover{
+    width: 100%;
+    color: #ffffff;
+    border-bottom: solid 1px #ffffff;
+}
+
+.icons-navbar{
+    margin: 20px 0 0 0;
+}
+
+.search{
+    border-radius: 20px;
+}
+
+.link-navbar {
+    color: #ffffff;
+}
+
+@media screen and (min-width: 992px) {
+    .navbar{
+        background-color: #0c0c0c;
+        height: 150px;
+        padding: 20px 20px;
+    }
+
+    .logo-navbar {
+        width: calc(20% - 20px);
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-navbar {
+        width: alc(80% - 20px);
+    }
+
+    .container-navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .links-navbar{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .search-navbar{
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .icons-navbar{
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0;
+    }
+}
+
 /* SECTION COMPANY */
 
 .company-container {
@@ -37,24 +129,6 @@
 }
 
 /* SECTION MOBILE */
-/* SECTION HEADER */
-
-header {
-    background-color: #0c0c0c;
-}
-
-.logo-navbar {
-    color: #ffffff;
-    font-family: 'Orbitron', sans-serif;
-}
-
-.search{
-    border-radius: 20px;
-}
-
-.link-navbar {
-    color: #ffffff;
-}
 
 /* SECTION */
 
