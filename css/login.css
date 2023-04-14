@@ -14,7 +14,7 @@
 
 .login-container h1 {
     padding: 1rem;
-    background-color: #7532F9;
+    background-color: #7F00FF;
 }
 
 .login-container form input {
@@ -27,11 +27,11 @@
 }
 
 .login-container form input:focus {
-    box-shadow: 0 0 2px 1px #e6e6e6;
+    box-shadow: 0 0 2px 1px #7F00FF
 }
 
 .login-container form .btn-login {
-    background-color: #7532F9;
+    background-color: #7F00FF;
 }
 
 .link-btn-container a {
