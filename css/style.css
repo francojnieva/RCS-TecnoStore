@@ -303,7 +303,11 @@ h4 {
 
     .banner-television {
         display: none;
+        
+    }
 
+    .banner-television-mobile{
+        width: 100%;
     }
 
     
@@ -325,9 +329,14 @@ h4 {
 }
 
 @media screen and (min-width: 1024px) {
-    .banner-television {
+    .banner-television{
         display: inherit;
         width: 100%;
+    }
+
+    .banner-television-mobile {
+        display: none;
+        
     }
 
 }
