@@ -5,21 +5,21 @@ const productWatch = [
     {
         marca: "Xiaomi",
         title: "AMAZFIT GTS 4 MINI",
-        price: 60.300,
+        price: 60.399,
         id: "CODW01",
         image: "./img/xiaomi-watch1.png"
     },
     {
         marca: "Xiaomi",
         title: "WATCH S1 ACTIVE GL",
-        price: 59.900,
+        price: 59.999,
         id: "CODW02",
         image: "./img/xiaomi-watch2.png"
     },
     {
         marca: "Xiaomi",
         title: "KIESLECT L11 PRO",
-        price: 26.500,
+        price: 26.599,
         id: "CODW03",
         image: "./img/xiaomi-watch3.png"
     }
