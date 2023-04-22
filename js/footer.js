@@ -30,10 +30,10 @@ const renderFooter = (item) => {
 
                 <p class= "members text-center mt-2">${item.name}</p>
                 <a class="text-decoration-none" href="${item.profileLinkedin}" target="_blank">
-                 <img class="linkedin" src="./img/linkedin_logo.svg" alt="Linkedin" >
+                 <img class="linkedin" src="../img/linkedin_logo.svg" alt="Linkedin" >
                 </a>
                 <a class="text-decoration-none" href="${item.profileGithub}" target="_blank">
-                <img class="github" src="./img/github_logo.svg" alt="Github">
+                <img class="github" src="../img/github_logo.svg" alt="Github">
                 </a>
         `
         containerFooter.appendChild(elementitem)
