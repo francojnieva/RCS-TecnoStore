@@ -11,7 +11,7 @@ const productMobile = [
     },
     {
         marca: "Samsung",
-        title: "SM-G990E S21 GRAFITO",
+        title: "S21 SM-G990E GRAFITO",
         price: 249.999,
         id: "CODM02",
         image: "./img/samsung3-removebg-preview.png"
