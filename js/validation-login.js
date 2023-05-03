@@ -1,26 +1,40 @@
-const form = document.querySelector('form');
-const emailInput = document.querySelector('#email');
-const passwordInput = document.querySelector('#password');
+function validarFormulario() {
+  // Obtener los valores de los campos
+  const correo = document.getElementById("email").value;
+  const passwordInput = document.querySelector('#password').value;
 
-form.addEventListener('submit', (event) => {
-  // Prevenir que el formulario se envíe
-  event.preventDefault();
-
-  // Validar que el correo electrónico tenga un formato válido
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(emailInput.value)) {
-    alert('Por favor, ingrese un correo electrónico válido');
-    return;
+  // Verificar que los campos requeridos no estén vacíos
+  if (correo == "" || passwordInput == "") {
+      Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Por favor complete todos los campos!',   
+        })
+    return false;
   }
 
-  // Validar que la contraseña tenga al menos 8 caracteres
-  if (passwordInput.value.length < 8) {
-    alert('La contraseña debe tener al menos 8 caracteres');
-    return;
+  if(passwordInput.length < 8) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Por favor complete todos los campos!',   
+    })
+    return false;
   }
 
-  // Si los campos son válidos, enviar el formulario
-  form.submit();
-});
+  // Verificar que el correo electrónico sea válido
+  const correoRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (!correoRegex.test(correo)) {
+      Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Por favor ingrese un Correo válido!',   
+        });
+    return false;
+  }
+
+  // Si todo está bien, devolver true para enviar el formulario
+  return true;
+}
 
 

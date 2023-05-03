@@ -1,47 +1,50 @@
 
-const form = document.querySelector('form');
-const nameInput = document.getElementById('name');
-const lastNameInput = document.getElementById('lastName');
-const emailInput = document.getElementById('email');
-const passwordInput = document.getElementById('password');
-const confirmPasswordInput = document.getElementsByName('confirmPassword')[0];
-
-form.addEventListener('submit', function(event) {
-  if (!validateName(nameInput.value)) {
-    alert('Por favor ingrese un nombre válido');
-    event.preventDefault();
-  } else if (!validateLastName(lastNameInput.value)) {
-    alert('Por favor ingrese un apellido válido');
-    event.preventDefault();
-  } else if (!validateEmail(emailInput.value)) {
-    alert('Por favor ingrese un correo electrónico válido');
-    event.preventDefault();
-  } else if (!validatePassword(passwordInput.value)) {
-    alert('La contraseña debe tener al menos 8 caracteres');
-    event.preventDefault();
-  } else if (passwordInput.value !== confirmPasswordInput.value) {
-    alert('Las contraseñas no coinciden');
-    event.preventDefault();
+function validarFormulario() {
+  // Obtener los valores de los campos
+  const nombre = document.getElementById("name").value;
+  const apellido = document.getElementById("lastName").value;
+  const correo = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const confirnPassword = document.getElementById("confirnPassword").value;
+  // Verificar que los campos requeridos no estén vacíos
+  if (nombre == "" || apellido == "" || correo == "" || password == "" || confirnPassword == "") {
+      Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Por favor complete todos los campos!',   
+        })
+    return false;
   }
-});
 
-function validateName(name) {
-  // Validar el nombre ingresado. En este ejemplo, se verifica que no esté vacío.
-  return name.trim() !== '';
-}
+  // Verificar que el correo electrónico sea válido
+  const correoRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (!correoRegex.test(correo)) {
+      Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Por favor ingrese un Correo válido!',   
+        });
+    return false;
+  }
 
-function validateLastName(lastName) {
-  // Validar el apellido ingresado. En este ejemplo, se verifica que no esté vacío.
-  return lastName.trim() !== '';
-}
+  if (password.length < 8) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'No debe tener menos de 7 caracteres',   
+    });
+    return false;
+  }
 
-function validateEmail(email) {
-  // Validar el correo electrónico ingresado. En este ejemplo, se verifica que tenga un formato válido.
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
+  if (password != confirnPassword ) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'La contraseña deben ser iguales',   
+    });
+    return false;
+  }
 
-function validatePassword(password) {
-  // Validar la contraseña ingresada. En este ejemplo, se verifica que tenga al menos 8 caracteres.
-  return password.length >= 8;
+  // Si todo está bien, devolver true para enviar el formulario
+  return true;
 }
