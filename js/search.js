@@ -109,7 +109,7 @@ const renderSearch = (item) => {
 
         elementitem.innerHTML = `
 
-                    <a href="./html/product.html">
+                    <a href="../html/product.html">
                         <img src="${item.image}" height="80px">
                         </img>
                         <div>
