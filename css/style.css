@@ -560,3 +560,24 @@ h4 {
         background-color: #232323;
     }
 }
+
+
+/* MODAL DEL CARRITO */
+
+.modal-body ul li {
+    display: flex;
+    justify-content: space-around;
+    padding: .5rem 0rem;
+}
+
+.modal-body button {
+    background-color: red;
+    border-radius: .3rem;
+    color: white;
+    border: none;
+    padding: .5rem .8rem;
+}
+
+#cart-total {
+    font-weight: 600;
+}
