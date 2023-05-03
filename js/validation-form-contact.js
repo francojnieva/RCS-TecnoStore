@@ -27,5 +27,14 @@ function validarFormulario() {
     }
   
     // Si todo está bien, devolver true para enviar el formulario
-    return true;
+    if (true) {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Enviado!',
+            showConfirmButton: false,
+            timer: 1500
+          })
+        return false
+    }
   }

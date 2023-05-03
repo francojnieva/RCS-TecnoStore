@@ -17,7 +17,7 @@ function validarFormulario() {
     Swal.fire({
       icon: 'error',
       title: 'Oops...',
-      text: 'Por favor complete todos los campos!',   
+      text: 'La contraseña debe tener más de 7 caracteres!',   
     })
     return false;
   }
@@ -34,7 +34,16 @@ function validarFormulario() {
   }
 
   // Si todo está bien, devolver true para enviar el formulario
-  return true;
+  if (true) {
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Inicio exitoso',
+        showConfirmButton: false,
+        timer: 1500
+      })
+      return false
+    }
 }
 
 

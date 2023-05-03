@@ -31,20 +31,29 @@ function validarFormulario() {
     Swal.fire({
       icon: 'error',
       title: 'Oops...',
-      text: 'No debe tener menos de 7 caracteres',   
+      text: 'La contraseña debe tener más de 7 caracteres',   
     });
     return false;
   }
 
-  if (password != confirnPassword ) {
+  if (confirnPassword != password ) {
     Swal.fire({
       icon: 'error',
       title: 'Oops...',
-      text: 'La contraseña deben ser iguales',   
+      text: 'Las contraseñas deben ser iguales',   
     });
     return false;
   }
 
   // Si todo está bien, devolver true para enviar el formulario
-  return true;
+  if (true) {
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Cuenta creada!',
+        showConfirmButton: false,
+        timer: 1500
+      })
+      return false
+    }
 }
