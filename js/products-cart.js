@@ -193,13 +193,14 @@ renderProducts(productsMobile, containerProductMobile)
 renderProducts(productsWatch, containerProductWatch)
 renderProducts(productsTelevision, containerProductTelevision)
 
-const cart = [] 
+let cart = [] 
 
 function addToCart(productId) {
     const productToAdd = product.find((product) => product.id === productId) // Busco el producto en el array
 
     cart.push(productToAdd)  // Agrego el producto al carrito
-    
+
+    localStorage.setItem("cart", JSON.stringify(cart)) // seteo con clave "cart" los productos
 }
 
 function cartView() {
@@ -213,21 +214,20 @@ function cartView() {
     cartQuantity.innerText = cart.length; // Según la longitud del array, es la cantidad que hay
 
     cart.forEach((item) => { // Lista de productos en el carrito en el modal
-    const cartItem = document.createElement("li")
-    cartItem.innerText = `${item.marca} - ${item.description} - $${item.price}` 
+        const cartItem = document.createElement("li")
+        cartItem.innerText = `${item.marca} - ${item.description} - $${item.price}` 
 
     
-    const deleteButton = document.createElement("button") // Botón "Eliminar" para cada producto
-    deleteButton.innerText = "Eliminar"
+        const deleteButton = document.createElement("button") // Botón "Eliminar" para cada producto
+        deleteButton.innerText = "Eliminar"
 
-    deleteButton.addEventListener("click", () => {
-        removeFromCart(item.id)
-    })
+        deleteButton.addEventListener("click", () => {
+            removeFromCart(item.id)
+        })
 
-    cartItem.appendChild(deleteButton)
+        cartItem.appendChild(deleteButton)
 
-    cartList.appendChild(cartItem)
-
+        cartList.appendChild(cartItem)
     })
 
     const cartTotalElement = document.getElementById("cart-total")
@@ -237,7 +237,6 @@ function cartView() {
     cartTotal = cartTotal.toFixed(3) // Fijo el valor con tres decimales. Esto es un string, NO un número.
 
     cartTotalElement.innerText = `Total: $ ${cartTotal}`
-
 }
 
 function removeFromCart(productId) {
@@ -245,6 +244,8 @@ function removeFromCart(productId) {
 
     if (productIndex !== -1) {  // Si se encontró el producto, elimino del array
         cart.splice(productIndex, 1)
+
+        localStorage.setItem("cart", JSON.stringify(cart)) // seteo con clave "cart" los productos
       
         cartView() 
     }
@@ -256,7 +257,15 @@ iconCart.addEventListener("click", () => {
         keyboard: false
     });
     
-    cartModal.show();
+    cartModal.show()
     
-    cartView()
+    loadCart()
 })
+
+function loadCart() {
+    const storedCart = localStorage.getItem("cart")
+    if (storedCart) {
+      cart = JSON.parse(storedCart);
+      cartView() 
+    }
+}
