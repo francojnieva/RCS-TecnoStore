@@ -52,8 +52,12 @@ function validarFormulario() {
         icon: 'success',
         title: 'Cuenta creada!',
         showConfirmButton: false,
-        timer: 1500
-      })
-      return false
+    })
+    setTimeout(function(){
+        window.location.href = "../index.html"
+    }, 1500)
+
+    return false
+
     }
 }

@@ -571,3 +571,12 @@ h4 {
         right: calc((0.2 * 80%) + 20px);
     }
 }
+
+.modal-content {
+    border:  0.2rem solid #E100FF;
+    background-color: rgb(230, 230, 230);
+}
+
+.text-quantity {
+    font-weight: 600;
+}

@@ -40,9 +40,13 @@ function validarFormulario() {
         icon: 'success',
         title: 'Inicio exitoso',
         showConfirmButton: false,
-        timer: 1500
-      })
-      return false
+    })
+    setTimeout(function(){
+        window.location.href = "../index.html"
+    }, 1500)
+
+    return false
+
     }
 }
 
