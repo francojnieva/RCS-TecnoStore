@@ -219,7 +219,7 @@ function cartView() {
 
     
         const deleteButton = document.createElement("button") // Botón "Eliminar" para cada producto
-        deleteButton.innerText = "Eliminar"
+        deleteButton.innerText = "Borrar"
 
         deleteButton.addEventListener("click", () => {
             removeFromCart(item.id)

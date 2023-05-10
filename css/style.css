@@ -512,19 +512,24 @@ h4 {
 }
 
 /* MODAL DEL CARRITO */
+#cart-list {
+    padding-left: 0rem;
+}
 
 .modal-body ul li {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     padding: .5rem 0rem;
 }
 
 .modal-body button {
+    width: 20%;
     background-color: red;
     border-radius: .3rem;
     color: white;
     border: none;
-    padding: .5rem .8rem;
+    padding: .5rem 0rem;
+    margin: 1rem 0rem;
 }
 
 #cart-total {
@@ -569,6 +574,11 @@ h4 {
         width: calc(0.3 * (80% - 20px));
         top: 100px;
         right: calc((0.2 * 80%) + 20px);
+    }
+
+    .modal-body button {
+        width: 10%;
+        font-size: .9rem;
     }
 }
 
