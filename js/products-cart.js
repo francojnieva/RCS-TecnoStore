@@ -173,7 +173,7 @@ function renderProducts(product, section) {
       const productElement = document.createElement("div")
     //   productElement.classList.add("product")
       productElement.innerHTML = `
-        <div class="card card-mobile">
+        <div class="card card-mobile" data-aos="fade-up">
             <img src=${product.image} class="card-img-top" alt="Celular de la marca Samsung">
             <div class="card-body">
                 <h5 class="card-title" id="${product.marca}">${product.marca}</h5>
