@@ -142,7 +142,7 @@ const product = [
     {
         id: "tv3",
         marca: "Samsung",
-        description: "50 UHD 4K Smart TV AU7000",
+        description: "50 UHD 4K Smart TV",
         price: 143999,
         code: "CODT03",
         image: "./img/tv-samsung3.png",
@@ -153,7 +153,7 @@ const product = [
     {
         id: "tv4",
         marca: "Samsung",
-        description: "55 UHD 4K Smart TV AU7000",
+        description: "55 UHD 4K Smart TV",
         price: 175499,
         code: "CODT04",
         image: "./img/tv-samsung4.png",
@@ -180,7 +180,7 @@ function renderProducts(product, section) {
                 <p class="card-text">${product.description}</p>
                 <p class="price price-mobile">$${product.price}</p>
                 <p class="keys">${product.code}</p>
-                <button class="btn btn-primary" id="${product.id}" onclick="addToCart('${product.id}')">Agregar al carrito</button>
+                <button class="btn btn-primary" id="${product.id}" onclick="addToCart('${product.id}')"><img src="./img/shopping_icon.svg" width="15px"> Agregar al carrito</button>
             </div>
         </div>
       `
