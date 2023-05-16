@@ -1,9 +1,9 @@
 function validarFormulario() {
     // Obtener los valores de los campos
-    const nombre = document.getElementById("name").value;
-    const apellido = document.getElementById("lastName").value;
-    const correo = document.getElementById("email").value;
-    const mensaje = document.getElementById("message").value;
+    const nombre = document.getElementById("name").value
+    const apellido = document.getElementById("lastName").value
+    const correo = document.getElementById("email").value
+    const mensaje = document.getElementById("message").value
   
     // Verificar que los campos requeridos no estén vacíos
     if (nombre == "" || apellido == "" || correo == "" || mensaje == "") {
@@ -16,7 +16,7 @@ function validarFormulario() {
     }
   
     // Verificar que el correo electrónico sea válido
-    const correoRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const correoRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     if (!correoRegex.test(correo)) {
         Swal.fire({
             icon: 'error',
@@ -34,7 +34,13 @@ function validarFormulario() {
             title: 'Enviado!',
             showConfirmButton: false,
             timer: 1500
-          })
+          }).then(() => {
+            document.getElementById("name").value = ""
+            document.getElementById("lastName").value = ""
+            document.getElementById("email").value = ""
+            document.getElementById("message").value = ""
+        })
+
         return false
     }
   }
