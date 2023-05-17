@@ -171,7 +171,6 @@ const productsTelevision = product.slice(10)
 function renderProducts(product, section) {
     product.forEach((product) => {
       const productElement = document.createElement("div")
-    //   productElement.classList.add("product")
       productElement.innerHTML = `
         <div class="card card-mobile" data-aos="fade-up">
             <img src=${product.image} class="card-img-top" alt="Celular de la marca Samsung">
@@ -198,7 +197,7 @@ let cart = []
 function addToCart(productId) {
     const productToAdd = product.find((product) => product.id === productId) // Busco el producto en el array
 
-    cart.push(productToAdd)  // Agrego el producto al carrito
+    cart.push(productToAdd)
 
     localStorage.setItem("cart", JSON.stringify(cart)) // seteo con clave "cart" los productos
 
@@ -213,14 +212,14 @@ function cartView() {
     cartQuantity.innerText = ""
     cartList.innerHTML = ""
 
-    cartQuantity.innerText = cart.length; // Según la longitud del array, es la cantidad que hay
+    cartQuantity.innerText = cart.length // Según la longitud del array, es la cantidad que hay
 
-    cart.forEach((item) => { // Lista de productos en el carrito en el modal
+    cart.forEach((item) => { 
         const cartItem = document.createElement("li")
         cartItem.innerText = `${item.marca} - ${item.description} - $${item.price}` 
 
     
-        const deleteButton = document.createElement("button") // Botón "Eliminar" para cada producto
+        const deleteButton = document.createElement("button")
         deleteButton.innerText = "Borrar"
 
         deleteButton.addEventListener("click", () => {
