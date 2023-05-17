@@ -201,6 +201,8 @@ function addToCart(productId) {
     cart.push(productToAdd)  // Agrego el producto al carrito
 
     localStorage.setItem("cart", JSON.stringify(cart)) // seteo con clave "cart" los productos
+
+    updateCartNotification()
 }
 
 function cartView() {
@@ -246,16 +248,33 @@ function removeFromCart(productId) {
         cart.splice(productIndex, 1)
 
         localStorage.setItem("cart", JSON.stringify(cart)) // seteo con clave "cart" los productos
+
+        updateCartNotification()
       
         cartView() 
     }
 }
 
+function updateCartNotification() {
+    const cartNotification = document.getElementById("cart-notification")
+
+    if (cart.length > 0) {
+        cartNotification.style.display = "flex"
+    } else {
+        cartNotification.style.display = "none"
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadCart()
+    updateCartNotification()
+})
+
 iconCart.addEventListener("click", () => {
     const cartModal = new bootstrap.Modal(document.getElementById("cart-modal"), {
         backdrop: "static",
         keyboard: false
-    });
+    })
     
     cartModal.show()
     
@@ -265,7 +284,7 @@ iconCart.addEventListener("click", () => {
 function loadCart() {
     const storedCart = localStorage.getItem("cart")
     if (storedCart) {
-      cart = JSON.parse(storedCart);
+      cart = JSON.parse(storedCart)
       cartView() 
     }
 }

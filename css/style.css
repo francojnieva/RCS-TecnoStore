@@ -590,3 +590,34 @@ h4 {
 .text-quantity {
     font-weight: 600;
 }
+
+#cart-notification {
+    display: none;
+    width: .9rem;
+    height: .9rem;
+    background: linear-gradient(to right, #ff0095, #f700ff); 
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 320px) {
+    #cart-notification {
+        position: relative;
+        top: -2.2rem;
+        left: 5.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #cart-notification {
+        position: absolute;
+        top: 3.3rem;
+        left: 60.5rem;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    #cart-notification {
+        top: 3.3rem;
+        left: 80.7rem;
+    }
+}
