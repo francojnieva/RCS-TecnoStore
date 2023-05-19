@@ -611,13 +611,24 @@ h4 {
     #cart-notification {
         position: absolute;
         top: 3.3rem;
-        left: 59.5rem;
+        left: 60.5rem;
     }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1080px) {
     #cart-notification {
-        top: 3.3rem;
+        left: 64rem;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #cart-notification {
         left: 79.8rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #cart-notification {
+        left: 85.2rem;
     }
 }
