@@ -177,7 +177,7 @@ function renderProducts(product, section) {
             <div class="card-body">
                 <h5 class="card-title" id="${product.marca}">${product.marca}</h5>
                 <p class="card-text">${product.description}</p>
-                <p class="price price-mobile">$${product.price}</p>
+                <p class="price price-mobile">$ ${product.price}</p>
                 <p class="keys">${product.code}</p>
                 <button class="btn btn-primary" id="${product.id}" onclick="addToCart('${product.id}')"><img src="./img/shopping_icon.svg" width="15px"> Agregar al carrito</button>
             </div>
@@ -216,9 +216,18 @@ function cartView() {
 
     cart.forEach((item) => { 
         const cartItem = document.createElement("li")
-        cartItem.innerText = `${item.marca} - ${item.description} - $${item.price}` 
-
-    
+        cartItem.innerHTML = `
+        <div class= "list-container">
+            <div class="image-container">
+                <img src="${item.image}" alt="${item.marca}">
+            </div>
+            <div class ="description-contianer">
+            <p class="fw-bold">${item.marca}</p>
+            <p class="description">${item.description}</p>
+            <p class="fst-italic">$ ${item.price}</p>
+            </div>
+        </div>
+        ` 
         const deleteButton = document.createElement("button")
         deleteButton.innerText = "Borrar"
 
