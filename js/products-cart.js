@@ -196,7 +196,7 @@ let cart = []
 
 function addToCart(productId) {
     const productToAdd = product.find((product) => product.id === productId) // Busco el producto en el array
-
+    Swal.fire("Se agregó correctamente al carrito")
     cart.push(productToAdd)
 
     localStorage.setItem("cart", JSON.stringify(cart)) // seteo con clave "cart" los productos
