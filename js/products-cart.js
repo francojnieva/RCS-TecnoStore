@@ -255,12 +255,12 @@ function removeFromCart(productId) {
 }
 
 function updateCartNotification() {
-    const cartNotification = document.getElementById("cart-notification")
+    const cartNotification = document.getElementById("point")
 
     if (cart.length > 0) {
-        cartNotification.style.display = "flex"
-    } else {
-        cartNotification.style.display = "none"
+        cartNotification.classList.add("position-absolute", "top-0", "start-100", "translate-middle", "p-2", "rounded-circle")
+    } else if (cart.length == 0) {
+        cartNotification.classList.remove("position-absolute", "top-0", "start-100", "translate-middle", "p-2", "bg-danger", "border", "rounded-circle")
     }
 }
 
