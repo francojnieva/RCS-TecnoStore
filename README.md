@@ -2,6 +2,7 @@
 **TecnoStore** es un e-commerce desarrollado como parte del curso de Full Stack Developer en Rolling Code School. El objetivo principal del proyecto es crear una tienda virtual con persistencia de carrito de compras.
 
 El sitio está implementado utilizando HTML, CSS y JavaScript, y se ha utilizado Git y GitHub para el control de versiones del código. El proyecto sigue una metodología ágil, con la utilización de SCRUM y herramientas como Trello para la gestión de tareas.
+[Ver](https://tecnostore-group2.netlify.app) ✨
 
 ## Características principales
 ### Navbar
